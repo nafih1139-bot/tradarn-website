@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tradarn — Trading infrastructure, reimagined</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-view="home"><span class="brand-mark">t</span><span>tradarn</span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <button class="nav-item active" data-view="home"><span>⌂</span> Overview</button>
+      <button class="nav-item" data-view="infrastructure"><span>▦</span> White-label platform</button>
+      <button class="nav-item" data-view="vision"><span>⌁</span> Vision indicators <span class="nav-pill">AI</span></button>
+      <button class="nav-item" data-view="broker"><span>↗</span> Trading terminal</button>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div><span>Platform preview</span>
+        <div class="user-avatar">T</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="crumb">Overview</strong></div>
+        <div class="top-actions"><span class="secure-label"><span class="green-dot"></span> Infrastructure status</span><button class="avatar">T</button></div>
+      </header>
+
+      <section class="view active" id="view-home">
+        <div class="hero">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ONE PLATFORM. MANY POSSIBILITIES.</div>
+          <h1>Trading technology,<br><span>without the years of build.</span></h1>
+          <p class="hero-copy">The infrastructure to launch a trading experience, turn chart ideas into drawings, or explore multiple markets from one workspace.</p>
+          <div class="hero-actions"><button class="btn primary" data-view="infrastructure">Explore the platform <span>↗</span></button><button class="btn quiet" data-view="broker">Open trading terminal</button></div>
+          <div class="hero-art" aria-hidden="true"><div class="art-glow"></div><div class="chart-grid"></div><svg viewBox="0 0 580 220" class="hero-chart"><path d="M10 168 L64 145 L104 160 L147 105 L184 125 L226 72 L265 93 L309 50 L347 83 L390 37 L432 64 L477 22 L530 45 L570 9" fill="none" stroke="#55d6b0" stroke-width="2.5"/><path d="M10 168 L64 145 L104 160 L147 105 L184 125 L226 72 L265 93 L309 50 L347 83 L390 37 L432 64 L477 22 L530 45 L570 9 L570 220 L10 220Z" fill="url(#fill)" opacity=".22"/><defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#55d6b0"/><stop offset="1" stop-color="#55d6b0" stop-opacity="0"/></linearGradient></defs></svg><div class="floating-chip chip-one"><span class="chip-icon">↗</span><span><small>MARKET ACCESS</small><b>Multi-asset</b></span></div><div class="floating-chip chip-two"><span class="chip-icon purple">⌁</span><span><small>CHART TOOLS</small><b>Vision-powered</b></span></div></div>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow muted">CHOOSE YOUR WORKSPACE</span><h2>What are you here to build?</h2></div><span class="section-caption">Three ways to use Tradarn</span></div>
+        <div class="feature-grid">
+          <button class="feature-card" data-view="infrastructure"><div class="feature-icon icon-blue">▦</div><div class="card-topline"><span>01 / INFRASTRUCTURE</span><span class="arrow">↗</span></div><h3>White-label trading</h3><p>Launch a branded trading experience without building every component from scratch.</p><div class="card-link">Explore infrastructure <span>→</span></div></button>
+          <button class="feature-card" data-view="vision"><div class="feature-icon icon-purple">⌁</div><div class="card-topline"><span>02 / CHART INTELLIGENCE</span><span class="arrow">↗</span></div><h3>Vision indicator studio</h3><p>Describe a chart annotation or upload a reference image. AI turns the request into visual drawings.</p><div class="card-link">Open indicator studio <span>→</span></div></button>
+          <button class="feature-card" data-view="broker"><div class="feature-icon icon-green">↗</div><div class="card-topline"><span>03 / MARKET ACCESS</span><span class="arrow">↗</span></div><h3>Unified trading terminal</h3><p>Explore crypto, stocks, forex and futures from one clean terminal interface.</p><div class="card-link">Open terminal <span>→</span></div></button>
+        </div>
+        <div class="bottom-note"><span class="note-icon">i</span><span><b>Built for a real-world roadmap.</b> This starter includes working navigation, a live TradingView embed, and an API-backed AI annotation endpoint. Live brokerage execution and native chart drawing require licensed provider integrations.</span></div>
+      </section>
+
+      <section class="view" id="view-infrastructure">
+        <div class="page-intro"><div class="eyebrow muted">01 / INFRASTRUCTURE</div><h1>One engine.<br><span>Your brand on top.</span></h1><p>Tradarn is designed as a central trading technology layer for smaller banks, brokers and fintechs that need a modern customer experience without building the entire stack themselves.</p></div>
+        <div class="infra-layout"><div class="infra-main"><div class="panel-head"><div><h2>Platform components</h2><p>Illustrative product architecture</p></div><span class="tag">MODULAR</span></div><div class="component-list"><div class="component"><span class="component-icon">01</span><div><b>Branded client experience</b><p>Your logo, colors, domain and customer journeys.</p></div><span class="component-state">Configurable</span></div><div class="component"><span class="component-icon">02</span><div><b>Trading interface</b><p>Charts, watchlists, order tickets and portfolio views.</p></div><span class="component-state">UI starter</span></div><div class="component"><span class="component-icon">03</span><div><b>Broker / exchange integrations</b><p>Connect execution, market data, custody and account services.</p></div><span class="component-state">Integration</span></div><div class="component"><span class="component-icon">04</span><div><b>Risk, identity and compliance</b><p>Onboarding, permissions, audit trails and jurisdiction-specific controls.</p></div><span class="component-state">Required</span></div></div><div class="callout"><span>✳</span><div><b>White-label by design</b><p>Separate the core platform from each partner's branding and configuration.</p></div></div></div><div class="infra-side panel"><div class="mini-label">HOW IT WORKS</div><div class="steps"><div class="step"><span>1</span><div><b>Configure</b><p>Choose modules and partner branding.</p></div></div><div class="step"><span>2</span><div><b>Integrate</b><p>Connect regulated providers and data feeds.</p></div></div><div class="step"><span>3</span><div><b>Launch</b><p>Test, certify and deploy the partner experience.</p></div></div></div><div class="mini-divider"></div><div class="mini-label">MODEL</div><div class="model-row"><span>Platform fee</span><b>Recurring SaaS</b></div><div class="model-row"><span>Partner branding</span><b>Included in design</b></div><div class="model-row"><span>Execution</span><b>Via provider</b></div></div></div>
+        <div class="competitor-strip"><div><span class="eyebrow muted">MARKET LANDSCAPE</span><h2>Know the categories</h2><p>Different providers solve different parts of the stack.</p></div><div class="competitor"><b>Brokerage infrastructure</b><span>DriveWealth · Alpaca · Upvest</span></div><div class="competitor"><b>Crypto / multi-asset APIs</b><span>Coinbase APIs · Zero Hash</span></div><div class="competitor"><b>White-label trading UX</b><span>TradingView integrations · custom broker portals</span></div></div>
+      </section>
+
+      <section class="view" id="view-vision">
+        <div class="page-title-row"><div><div class="eyebrow muted">02 / CHART INTELLIGENCE</div><h1>Vision indicator <span>studio</span></h1><p>Tell Tradarn what to draw. The assistant returns chart annotation instructions—not buy or sell calls.</p></div><span class="tag purple-tag">AI-POWERED</span></div>
+        <div class="vision-layout"><div class="panel prompt-panel"><div class="panel-head"><div><h2>Describe your drawing</h2><p>Text instruction or reference image</p></div><span class="step-count">STEP 01</span></div><label for="instruction">Instruction</label><textarea id="instruction" placeholder="Example: Draw a horizontal line at the recent swing high, then mark the consolidation zone with a rectangle."></textarea><div class="prompt-examples"><button class="example" data-prompt="Draw a rising trend line from the lower-left swing low to the most recent higher high.">↗ Rising trend line</button><button class="example" data-prompt="Mark a horizontal support line near the lower third of the visible chart.">━ Support line</button><button class="example" data-prompt="Draw a rectangle around the sideways consolidation area in the middle of the chart.">▱ Consolidation zone</button></div><div class="upload-area"><input type="file" id="referenceFile" accept="image/*,video/*"><label for="referenceFile" class="upload-label"><span class="upload-icon">↑</span><span><b>Upload reference image</b><small>PNG, JPG or WebP · video needs frame extraction</small></span><span class="upload-browse">Browse</span></label><div id="fileName" class="file-name">No file selected</div></div><button id="analyzeBtn" class="btn primary full-btn">Generate chart drawings <span>↗</span></button><p class="privacy-note">Your uploaded image is sent to the configured AI provider for analysis.</p><div id="aiStatus" class="status-message" aria-live="polite"></div></div>
+          <div class="panel chart-panel"><div class="panel-head"><div><h2>Chart preview</h2><p><span class="green-dot"></span> Live public crypto candles · AI drawings anchored to price/time</p></div><select id="visionSymbol" class="select-dark"><option value="BTCUSDT">BTCUSDT · Bitcoin</option><option value="ETHUSDT">ETHUSDT · Ethereum</option><option value="SOLUSDT">SOLUSDT · Solana</option><option value="BNBUSDT">BNBUSDT · BNB</option></select></div><div class="chart-stage"><div id="visionTradingView" class="tv-chart"></div><svg id="drawingOverlay" class="drawing-overlay" preserveAspectRatio="none"></svg><div id="chartEmpty" class="chart-empty">Generate drawings to see annotations here</div></div><div class="drawings-footer"><div><span class="green-dot"></span><span id="drawingSummary">No generated drawings yet</span></div><button id="clearDrawings" class="text-btn">Clear drawings</button></div><div id="drawingLegend" class="drawing-legend"></div></div></div>
+        <div class="bottom-note"><span class="note-icon">i</span><span>Drawings are anchored to chart price/time coordinates and stay aligned as you pan or zoom. This preview uses live public crypto candles; it does not place trades or provide buy/sell recommendations.</span></div>
+      </section>
+
+
+      <section class="view" id="view-broker">
+        <div id="brokerOverview">
+          <div class="account-banner">
+            <div><div class="eyebrow muted">03 / UNIFIED MARKET ACCESS</div><h1>Your markets, <span>one workspace.</span></h1><p>Track your portfolio and choose an asset class to open its dedicated trading terminal.</p></div>
+            <div class="balance-card"><span>TOTAL ACCOUNT BALANCE</span><strong>$25,000.00</strong><small><span class="green-dot"></span> Demo account · Preview data</small></div>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric"><span>Available balance</span><b>$25,000.00</b><small>Demo funds</small></div>
+            <div class="metric"><span>Today's P&amp;L</span><b class="positive">+$284.50</b><small>Illustrative only</small></div>
+            <div class="metric"><span>Open positions</span><b>04</b><small>Sample portfolio</small></div>
+            <div class="metric"><span>Watchlist markets</span><b>40</b><small>10 symbols per category</small></div>
+          </div>
+          <div class="overview-section-head"><div><div class="eyebrow muted">MARKET ACCESS</div><h2>Choose your market</h2><p>Each market opens its own professional trading workspace.</p></div><span class="section-caption">4 asset classes · 40 symbols</span></div>
+          <div class="market-choice-grid">
+            <button class="market-choice" data-open-market="stocks"><span class="choice-icon stock-icon">▥</span><span class="choice-count">10 MARKETS</span><b>Stocks</b><small>Equities · US exchanges</small><span class="choice-link">Open stock terminal <i>↗</i></span></button>
+            <button class="market-choice" data-open-market="crypto"><span class="choice-icon crypto-icon">₿</span><span class="choice-count">10 MARKETS</span><b>Crypto</b><small>Digital assets · Spot pairs</small><span class="choice-link">Open crypto terminal <i>↗</i></span></button>
+            <button class="market-choice" data-open-market="forex"><span class="choice-icon forex-icon">⇄</span><span class="choice-count">10 MARKETS</span><b>Forex</b><small>Currency pairs · FX markets</small><span class="choice-link">Open forex terminal <i>↗</i></span></button>
+            <button class="market-choice" data-open-market="futures"><span class="choice-icon futures-icon">⌁</span><span class="choice-count">10 MARKETS</span><b>Futures</b><small>Listed futures · Continuous symbols</small><span class="choice-link">Open futures terminal <i>↗</i></span></button>
+          </div>
+          <div class="panel overview-watchlist"><div class="panel-head"><div><h2>Market snapshot</h2><p>Select any market above to view its live TradingView chart.</p></div><span class="tag">TRADINGVIEW</span></div><div class="snapshot-grid"><div><span>BTC / USDT</span><b>Crypto</b><small>BINANCE:BTCUSDT</small></div><div><span>Apple Inc.</span><b>Stocks</b><small>NASDAQ:AAPL</small></div><div><span>EUR / USD</span><b>Forex</b><small>OANDA:EURUSD</small></div><div><span>E-mini S&amp;P 500</span><b>Futures</b><small>CME_MINI:ES1!</small></div></div></div>
+          <div class="bottom-note"><span class="note-icon">i</span><span><b>Demo account.</b> Balance and performance are illustrative. Live execution requires a connected, licensed broker and account infrastructure.</span></div>
+        </div>
+
+        <div id="brokerTerminal" class="broker-terminal-view">
+          <div class="terminal-page-head"><button id="backToMarkets" class="back-btn">← All markets</button><div><div class="eyebrow muted">TRADING TERMINAL / <span id="terminalMarketName">CRYPTO</span></div><h1 id="terminalPageTitle">Crypto terminal</h1></div><div class="terminal-balance-mini"><span>ACCOUNT BALANCE</span><b>$25,000.00</b></div></div>
+          <div class="terminal-workspace">
+            <aside class="exchange-markets">
+              <div class="exchange-market-head"><b>Markets</b><span>Top movers</span></div>
+              <input id="marketSearch" class="market-search" placeholder="⌕  Search markets">
+              <div class="exchange-filter">All <span>Top</span><span>New</span><span>Favorites</span></div>
+              <div id="exchangeSymbolList" class="exchange-symbol-list"></div>
+            </aside>
+            <div class="exchange-chart-col">
+              <div class="exchange-instrument-head"><div><span id="terminalAssetBadge" class="instrument-badge">₿</span><b id="terminalInstrument">BTCUSDT</b><span class="instrument-exchange" id="terminalExchange">BINANCE</span></div><span class="market-live-label"><i></i> TradingView market chart</span></div>
+              <div class="chart-toolbar"><span>Chart</span><span>Overview</span><span>Trading data</span><div class="toolbar-spacer"></div><select id="terminalInterval"><option value="1">1m</option><option value="5">5m</option><option value="15">15m</option><option value="60" selected>1h</option><option value="240">4h</option><option value="D">1D</option></select></div>
+              <div id="terminalTradingView" class="terminal-live-chart"></div>
+              <div class="terminal-chart-footer"><span>Powered by TradingView</span><span>Market data availability varies by exchange</span></div>
+            </div>
+            <aside class="exchange-order-col">
+              <div class="exchange-order-head"><b>Trade</b><span class="tag warning-tag">PREVIEW</span></div>
+              <div class="order-mode"><button class="active">Spot / Standard</button><button disabled>Advanced</button></div>
+              <div class="order-side-tabs"><button class="active buy-tab">Buy / Long</button><button class="sell-tab">Sell / Short</button></div>
+              <label class="exchange-field-label">Order type</label><select class="exchange-input" disabled><option>Limit order</option><option>Market order</option><option>Stop limit</option></select>
+              <label class="exchange-field-label">Price</label><div class="exchange-input price-input"><span>Market price</span><span>USD ▾</span></div>
+              <label class="exchange-field-label">Amount</label><div class="exchange-input price-input"><span>0.00</span><span id="amountAsset">BTC</span></div>
+              <div class="amount-slider"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+              <label class="exchange-field-label">Total</label><div class="exchange-input price-input"><span>0.00</span><span>USD</span></div>
+              <div class="order-available"><span>Available balance</span><b>$25,000.00</b></div>
+              <div class="order-available"><span>Estimated fees</span><b>—</b></div>
+              <div class="order-auth-buttons"><button disabled>Log in / Sign up</button><button disabled>Log in / Sign up</button></div>
+              <p class="order-disclaimer">Trading is not connected. Orders, leverage and shorting are disabled until regulated provider integrations are configured.</p>
+            </aside>
+          </div>
+          <div class="bottom-note"><span class="note-icon">i</span><span>This is a TradingView-powered terminal layout preview. The public widget provides a real chart feed where supported, but it does not connect to a brokerage account or enable native exchange order execution.</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
